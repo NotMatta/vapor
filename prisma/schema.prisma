@@ -9,10 +9,10 @@ datasource db {
 
 model User {
     id          String   @id @default(cuid())
-    username    String?
+    username    String
     email       String   @unique
     password    String
-    pfp         String
+    pfp         String   @default("https://cdn.iconscout.com/icon/free/png-256/avatar-380-456332.png")
     balance     Int      @default(0)
     library     UserGame[]
     reviews     Review[]
